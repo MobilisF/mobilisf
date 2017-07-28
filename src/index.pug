@@ -7,8 +7,8 @@ html
 		include pug/metatags.pug
 		+title('Nikita Kalachev')
 		include pug/styles.pug
-		link(href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet")
-		link(href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet")
 		
 	body
 		include pug/svg.pug
@@ -20,17 +20,22 @@ html
 					.wrapper__gradient
 					.wrapper__ground
 					.wrapper__header 
-						// Посмотреть ux дизайн 
 						.header-upper
-							.header-upper__name Mobilis
-								span.header-upper__brackets F
+							.header-upper__logo
+								.header-upper__logo-name Mobilis 
+								.header-upper__logo-brackets F
 							.header-upper__lang Language
-							.header-upper__menu Menu
-								ul.navbar
+							.header-upper__menu
+								.menu-about
+									a(href="") about me
+								.menu-tools 
+									a(href="") tools
+								.menu-contact
+									a(href="") contact
 						.header-subtitle
-							h2 Welcome to my digital home, I'm Nikita.
+							p Welcome to my digital home, I'm Nikita.
 						.header-title 
-							h1 Junior Frontend Developer
+							p Junior Frontend Developer
 						.header-
 						.header-
 			.wrap

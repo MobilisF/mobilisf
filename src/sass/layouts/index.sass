@@ -14,6 +14,16 @@
 	background: grey
 	margin-bottom: 10px
 
+#particles-js 
+	position: absolute
+	width: 100%
+	height: 100%
+	background-color: transparent
+	background-image: url("")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: 50% 50%
+
 //Space wrapper
 .wrapper
 	overflow: hidden
@@ -65,24 +75,104 @@
 	align-items: center
 	height: 7vh
 	width: 100vw
-
+	margin-top: 20px
 	font-family: 'Lato', sans-serif
-	font-size: .5em
-	font-weight: 400
+	text-transform: uppercase
 	color: #fff
 	background: rgba(0,0,0,.3)
+	
 
-	&__name
-		font-family: 'Lalezar', cursive
-		font-size: 3em
+	&__logo
+		display: flex
+		justify-content: space-around
+		align-items: center
 
-	&__brackets:before
-		content: " ["
+	&__logo-name
+		display: flex
+		align-items: center
+		margin: 0 5px 0 0
+		font-family: 'Lato', sans-serif
+		font-size: 1.2em
+		letter-spacing: 0.15rem
 
-	&__brackets:after
+
+	&__logo-brackets
+		display: flex
+		align-items: center
+		padding: 7px 0 0 0
+		font-family: 'Kalam', cursive
+		font-weight: 400
+		font-size: 1.75em
+		letter-spacing: 0.1rem
+
+	&__logo-brackets:before
+		content: "   ["
+		color: #F1A52E
+		font-size: 1.1em
+
+	&__logo-brackets:after
 		content: "]"
+		color: #F1A52E
+		font-size: 1.1em
+
+	&__lang
+		
+		
+
+	&__menu
+		display: flex
+		justify-content: space-around
+		width: 500px
+		font-size: 1.2em
+		letter-spacing: 0.15rem
+
+	&__menu a
+		color: #ffffff
+		text-decoration: none
+		padding: 10px 20px 10px 20px
+
+	&__menu a:hover
+		color: #FFA30F
+		transition: .2s
 
 
+
+.header-subtitle
+	width: 70vw
+	height: auto
+	margin: 25vh 0 0 0
+	padding: 20px
+	font-family: 'Lato', sans-serif
+	color: #fff
+	text-align: center
+	letter-spacing: 0.1rem
+	font-weight: 300
+	font-size: 1.8em
+
+	& p:after
+		content: "|"
+		color: #ffffff
+		visibility: visible
+		animation: caretFade 0.65s ease infinite
+
+
+@keyframes caretFade
+	from 
+		opacity: 1
+	to
+		opacity: 0
+
+//@keyframes caretFade
+	animation-name: caretFade
+	animation-duration: 0.35s
+	animation-timing-function: ease
+	animation-delay: initial
+	animation-iteration-count: infinite
+	animation-fill-mode: initial
+	animation-play-state: initial
+
+	animation-iteration-count: infinite
+	animation-direction: alternate-reverse
 
 
 
@@ -91,34 +181,28 @@
 
 .header-title 
 	width: 80vw
-	height: 200px
-	margin: 20vh 0 0 0
+	height: auto
+	margin: 0 0 0 0
+	padding: 30px
 	font-family: 'Lato', sans-serif
 	color: #fff
 	text-align: center
 	font-weight: 400
-	font-size: 1.5em
+	font-size: 3.5em
 	letter-spacing: 0.4rem
 	text-transform: uppercase
 	white-space: nowrap
 	backdrop-filter: grayscale(1) contrast(1) blur(1px)
+	opacity: 0.9
+
+	& p:after
+		content: "."
+		color: #FF9D00
+		font-size: 80px
+		margin-left: 10px
+		line-height: 0
 
 
-	//color: #ffffff
-	//font-size: 30px
-	
-	//opacity: 1
-
-
-#particles-js 
-	position: absolute
-	width: 100%
-	height: 100%
-	background-color: transparent
-	background-image: url("")
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: 50% 50%
 
 @keyframes rotate-in-center
 	0%
