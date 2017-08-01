@@ -6,6 +6,7 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <title>Markup | Nikita Kalachev</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
   </head>
@@ -24,18 +25,20 @@
                 <div class="header-upper__logo-name">Mobilis </div>
                 <div class="header-upper__logo-brackets">F</div>
               </div>
-              <div class="header-upper__lang">Language</div>
+              <!--.header-upper__lang Language-->
               <div class="header-upper__menu">
-                <div class="menu-about"><a href="">about me</a></div>
-                <div class="menu-tools"> <a href="">tools</a></div>
+                <!--.menu-abouta(href="") about me
+                -->
+                <!--.menu-tools a(href="") tools
+                -->
                 <div class="menu-contact"><a href="">contact</a></div>
               </div>
             </div>
-            <div class="header-subtitle">
-              <p>Welcome to my digital home, I'm Nikita.</p>
-            </div>
-            <div class="header-title"> 
-              <p>Junior Frontend Developer</p>
+            <div class="header-welcome">
+              <p><span class="tw-span"><span class="tw-content">Welcome to my home page, I'm Nikita.</span><span class="tw-caret" id="tw-caret"></span></span></p>
+              <div class="tw-header">
+                <h1 class="tw-header-title">Junior Frontend Developer</h1>
+              </div>
             </div>
             <div class="header-"></div>
             <div class="header-"></div>
@@ -43,13 +46,20 @@
         </div>
       </div>
       <div class="wrap">
-        <div class="about">
-          <div id="particles-js"></div>
-          <div class="about-"></div>
-          <div class="about-"></div>
-          <div class="about-"></div>
-          <div class="about-"></div>
-          <div class="about-"></div>
+        <div class="wrapper">
+          <div class="wrapper-color">
+            <div class="about">
+              <div class="about-logo"><i class="fa fa-grav fa-4x"></i></div>
+              <div class="about-subtitle">
+                <p>A few words</p>
+              </div>
+              <div class="about-title">
+                <p>About me</p>
+              </div>
+              <div class="about-"></div>
+              <div class="about-"></div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="wrap">
@@ -101,6 +111,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/vendors.js"></script>
+    <script src="js/typewriter.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
