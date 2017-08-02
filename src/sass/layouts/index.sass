@@ -11,8 +11,9 @@
 .wrap
 	width: 100vw
 	height: 100vh
-	background: grey
+	//background: grey
 	margin-bottom: 10px
+
 
 #particles-js 
 	position: absolute
@@ -215,19 +216,59 @@
 .wrapper-color
 	width: 100vw
 	height: 100vh
+	padding: 10px
 	background: url('../images/sprite.png')
-	opacity: 1
+
 
 .about
 	
 	&-logo
+		display: flex
+		align-items: center
+		justify-content: center
 		padding: 20px 0 10px 0
 		text-align: center
+
+	.left-line,
+	.right-line
+		position: absolute
+		top: 64px
+		width: 42%
+		height: 64px
+		border-top: 1px solid #000000
+
+	.left-line__triangle,
+	.right-line__triangle
+		position: absolute
+		top: -9px
+		width: 0
+		height: 0
+		border-top: 8px solid transparent
+		border-bottom: 8px solid transparent
+		backrgound: red
+
+	.left-line
+		left: 0
+
+		&__triangle
+			right: -16px
+			border-right: 16px solid black
+	
+	.right-line
+		right: 0
+
+		&__triangle
+			left: -16px
+			border-left: 16px solid black
+
+
+
+
 
 	.fa-grav
 			color: #FF4C5E
 			opacity: 0.8
-
+			margin: 0 20px 0 20px
 
 	&-subtitle
 		text-align: center
@@ -235,19 +276,64 @@
 		font:
 			size: 16px
 		color: #788082
+		letter-spacing: 0.1rem
 		text-transform: uppercase
 
 	&-title
 		text-align: center
-		padding: 5px 0 10px 0
+		padding: 5px 0 30px 0
 		font:
-			size: 46px
+			family: 'Fredericka the Great', cursive
+			size: 50px
+		letter-spacing: 0.2rem
+		color: #000
+		text-transform: uppercase
+
+	&-content
+		display: flex
+
+	.text-box
+		position: absolute
+		height: 500px
+		width: 42%
+		margin: 0 0 0 7.5%
+		background: rgba(0,0,0,.005)
+
+	.text
+		font-size: 26px
+		padding: 50px 80px
+		font-family: 'Mada', sans-serif
+		font-weight: 400
+		color: #ffffff
+		letter-spacing: 0.03rem
+		line-height: 2.2rem
+	
+
+
+.img-cover
+	height: 500px
+	width: 80%
+	background: linear-gradient(to right, rgba(72,87,102,0.65) 0%,rgba(31,37,44,0) 57%,rgba(0,0,0,0) 100%)
+	
+	
+	//linear-gradient(to right, rgba(122,142,162,0.65) 0%,rgba(49,57,65,0) 60%,rgba(0,0,0,0) 100%)
 
 
 
+.my-img
+	height: 500px
+	width: 85%
+	margin: 0 auto
+	background: url('../images/me.png') 
+	background-size: cover
 
 
-
+//circle
+//		width: 12px
+//		height: 12px
+//		background: none
+//		border-radius: 50px
+//		border: 1px solid #000000
 
 
 
