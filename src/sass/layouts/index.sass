@@ -11,7 +11,7 @@
 .wrap
 	width: 100vw
 	height: 100vh
-	//background: grey
+	background: #FBFCFB
 	margin-bottom: 10px
 
 
@@ -34,11 +34,11 @@
 	width: 100vw
 
 	&__space
+		height: 139vh
+		width: 125vw
 		background: url('../images/header-space2.png')
 		background-size: cover
 		background-color: rgba(255, 255, 0, .5)
-		height: 125vh
-		width: 125vw
 		animation: rotate-in-center 80s cubic-bezier(.25,.46,.45,.94) both
 		z-index: 1
 
@@ -46,8 +46,8 @@
 	&__gradient
 		position: absolute
 		left: 0
-		bottom: 12vh
-		height: 14vh
+		bottom: 0
+		height: 20vh
 		width: 100%
 		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%)
 		z-index: 2
@@ -55,11 +55,12 @@
 	&__ground
 		position: absolute
 		bottom: 0
-		background: url('../images/header-ground2.png')
+		background: url('../images/landscape.svg')  linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%)
 		background-size: cover
-		height: 25vh
+		height: 53vh
 		width: 100vw
 		z-index: 3
+		filter: contrast(0.85)
 
 	&__header
 		display: flex
@@ -149,8 +150,6 @@
 	padding: 20px 30px
 	background: rgba(0,0,0,.3)
 
-
-
 .tw-content
 	font-family: 'Lato', sans-serif
 	color: #fff
@@ -209,9 +208,9 @@
 		opacity: 0.9
 		transform-origin: bottom
 
+
+
 // A B O U T
-
-
 
 .wrapper-color
 	width: 100vw
@@ -228,6 +227,7 @@
 		justify-content: center
 		padding: 20px 0 10px 0
 		text-align: center
+
 
 	.left-line,
 	.right-line
@@ -261,23 +261,21 @@
 			left: -16px
 			border-left: 16px solid black
 
-
-
-
-
 	.fa-grav
-			color: #FF4C5E
-			opacity: 0.8
-			margin: 0 20px 0 20px
+		color: #FF4C5E
+		opacity: 0.8
+		margin: 0 20px 0 20px
+		animation: text-flicker-in-glow 5s linear both
 
 	&-subtitle
 		text-align: center
-		padding: 10px 0 10px 0
+		padding: 20px 0 20px 0
 		font:
 			size: 16px
 		color: #788082
 		letter-spacing: 0.1rem
 		text-transform: uppercase
+
 
 	&-title
 		text-align: center
@@ -288,6 +286,7 @@
 		letter-spacing: 0.2rem
 		color: #000
 		text-transform: uppercase
+
 
 	&-content
 		display: flex
@@ -307,25 +306,207 @@
 		color: #ffffff
 		letter-spacing: 0.03rem
 		line-height: 2.2rem
-	
 
+
+
+
+
+.box-img
+	height: 500px
+	width: 85%
+	margin: 0 auto
+	overflow: hidden
+	filter: grayscale(1)
+
+.box-img-filter
+	filter: grayscale(0)
+	transition-duration: 1.4s
+
+.my-img
+	height: 500px
+	width: 100%
+	margin: 0 auto
+	background: url('../images/me.png') 
+	background-size: cover
+
+.my-img-anim
+	animation: kenburns-right 3s ease-out both
 
 .img-cover
 	height: 500px
 	width: 80%
 	background: linear-gradient(to right, rgba(72,87,102,0.65) 0%,rgba(31,37,44,0) 57%,rgba(0,0,0,0) 100%)
-	
-	
-	//linear-gradient(to right, rgba(122,142,162,0.65) 0%,rgba(49,57,65,0) 60%,rgba(0,0,0,0) 100%)
 
 
 
-.my-img
-	height: 500px
-	width: 85%
-	margin: 0 auto
-	background: url('../images/me.png') 
+
+@keyframes text-flicker-in-glow
+  0%
+    opacity: 0
+  10%
+    opacity: 0
+    text-shadow: none
+  10.1%
+    opacity: 1
+    text-shadow: none
+  10.2%
+    opacity: 0
+    text-shadow: none
+  20%
+    opacity: 0
+    text-shadow: none
+  20.1%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.25)
+  20.6%
+    opacity: 0
+    text-shadow: none
+  30%
+    opacity: 0
+    text-shadow: none
+  30.1%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.45), 0 0 60px rgba(109, 123, 124, 0.25)
+  30.5%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.45), 0 0 60px rgba(109, 123, 124, 0.25)
+  30.6%
+    opacity: 0
+    text-shadow: none
+  45%
+    opacity: 0
+    text-shadow: none
+  45.1%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.45), 0 0 60px rgba(109, 123, 124, 0.25)
+  50%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.45), 0 0 60px rgba(109, 123, 124, 0.25)
+  55%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.45), 0 0 60px rgba(109, 123, 124, 0.25)
+  55.1%
+    opacity: 0
+    text-shadow: none
+  57%
+    opacity: 0
+    text-shadow: none
+  57.1%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.55), 0 0 60px rgba(109, 123, 124, 0.35)
+  60%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.55), 0 0 60px rgba(109, 123, 124, 0.35)
+  60.1% 
+    opacity: 0
+    text-shadow: none
+  65%
+    opacity: 0
+    text-shadow: none
+  65.1%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.55), 0 0 60px rgba(109, 123, 124, 0.35), 0 0 100px rgba(109, 123, 124, 0.1)
+  75%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.55), 0 0 60px rgba(109, 123, 124, 0.35), 0 0 100px rgba(109, 123, 124, 0.1)
+  75.1%
+    opacity: 0
+    text-shadow: none
+  77%
+    opacity: 0
+    text-shadow: none
+  77.1%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.55), 0 0 60px rgba(109, 123, 124, 0.4), 0 0 110px rgba(109, 123, 124, 0.2), 0 0 100px rgba(109, 123, 124, 0.1)
+  85%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.55), 0 0 60px rgba(109, 123, 124, 0.4), 0 0 110px rgba(109, 123, 124, 0.2), 0 0 100px rgba(109, 123, 124, 0.1)
+  85.1%
+    opacity: 0
+    text-shadow: none
+  86%
+    opacity: 0
+    text-shadow: none
+  86.1%
+    opacity: 1
+    text-shadow: 0 0 30px rgba(109, 123, 124, 0.6), 0 0 60px rgba(109, 123, 124, 0.45), 0 0 110px rgba(109, 123, 124, 0.25), 0 0 100px rgba(109, 123, 124, 0.1)
+  100%
+    opacity: 1
+    text-shadow: 0 0 50px rgba(109, 123, 124, 0.5), 0 0 80px rgba(109, 123, 124, 0.25), 0 0 130px rgba(109, 123, 124, 0.25), 0 0 120px rgba(109, 123, 124, 0.1)
+
+
+
+
+@keyframes kenburns-right
+	0%
+		transform: scale(1) translate(0,0)
+		transform-origin: 84% 84%
+	100%
+		transform: scale(1.1) translate(20px,15px)
+		transform-origin: right
+
+
+
+// S K I L L S
+
+.wrapper-skills
+	height: 100vh
+	width: 100vw
+	padding: 20px
+	background: url('../images/skills.png')
 	background-size: cover
+	opacity: 1
+
+
+.skills-header
+	//display: flex
+	//flex-direction: column
+	width: 30%
+	height: 300px
+	margin: 0 auto
+
+	&__one
+		display: inline-block
+		//width: auto
+		padding: 0 20px
+		background: #ffffff
+		p
+			font:
+				family: 'Titillium Web', sans-serif
+				size: 27px
+			color: #070e13
+	
+
+	&__two
+		margin: 0 0 0 160px
+		font:
+			family: 'Titillium Web', sans-serif
+			size: 36px
+		text-transform: uppercase
+
+	&__three
+		margin: -10px 0 0 -50px
+		font:
+			family: 'Titillium Web', sans-serif
+			size: 70px
+			weight: 900
+		letter-spacing: 10px
+		color: #ff3600
+		text-transform: uppercase
+		//text-shadow: 0px 0px 8px rgba(255, 54, 0, 0.6)
+		//background: linear-gradient(45deg, #e10019, #ff3600)
+		background-clip: text
+		text-fill-color: transparent
+
+
+
+
+
+
+
+
+
+
 
 
 //circle
